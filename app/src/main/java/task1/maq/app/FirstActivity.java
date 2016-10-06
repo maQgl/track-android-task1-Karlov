@@ -19,7 +19,7 @@ public class FirstActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        super.onStart();
+        super.onResume();
         if (!taskStarted) {
             taskStarted = true;
             new AsyncTask<Void, Void, Void>() {
