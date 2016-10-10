@@ -50,7 +50,7 @@ public class SecondActivity extends AppCompatActivity {
         isCounterActive = savedInstanceState.getBoolean("isCounterActive");
         if (savedInstanceState.getInt("counter") > 1) {
             mCounter = savedInstanceState.getInt("counter");
-            mTextView.setText((new fwMoney(mCounter*1.0)).num2str());
+            mTextView.setText((new MyOwnConverter()).convertNumber(mCounter));
         }
     }
 
@@ -63,7 +63,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void startCounter() {
-        mButton.setText("Stop");
+        mButton.setText(R.string.stop);
         isCounterActive = true;
         mCounterAsyncTask = new CounterAsyncTask();
         mCounterAsyncTask.execute(mCounter);
@@ -74,7 +74,7 @@ public class SecondActivity extends AppCompatActivity {
             mCounterAsyncTask.cancel(true);
         }
         mCounter = 1;
-        mButton.setText("Start");
+        mButton.setText(R.string.start);
         isCounterActive = false;
     }
 
@@ -105,7 +105,7 @@ public class SecondActivity extends AppCompatActivity {
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
             mCounter = values[0];
-            mTextView.setText((new fwMoney(mCounter*1.0)).num2str());
+            mTextView.setText((new MyOwnConverter()).convertNumber(mCounter));
         }
 
         @Override
