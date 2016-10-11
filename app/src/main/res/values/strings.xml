@@ -2,4 +2,46 @@
     <string name="app_name">app</string>
     <string name="start">start</string>
     <string name="stop">stop</string>
+
+    <string name="num1">один</string>
+    <string name="num2">два</string>
+    <string name="num3">три</string>
+    <string name="num4">четыре</string>
+    <string name="num5">пять</string>
+    <string name="num6">шесть</string>
+    <string name="num7">семь</string>
+    <string name="num8">восемь</string>
+    <string name="num9">девять</string>
+
+    <string name="num10">десять</string>
+    <string name="num11">одиннадцать</string>
+    <string name="num12">двенадцать</string>
+    <string name="num13">тринадцать</string>
+    <string name="num14">четырнадцать</string>
+    <string name="num15">пятнадцать</string>
+    <string name="num16">шестнадцать</string>
+    <string name="num17">семнадцать</string>
+    <string name="num18">восемнадцать</string>
+    <string name="num19">девятнадцать</string>
+
+    <string name="num20">двадцать</string>
+    <string name="num30">тридцать</string>
+    <string name="num40">сорок</string>
+    <string name="num50">пятьдесят</string>
+    <string name="num60">шестьдесят</string>
+    <string name="num70">семьдесят</string>
+    <string name="num80">восемьдесят</string>
+    <string name="num90">девяносто</string>
+
+    <string name="num100">сто</string>
+    <string name="num200">двести</string>
+    <string name="num300">триста</string>
+    <string name="num400">четыреста</string>
+    <string name="num500">пятьсот</string>
+    <string name="num600">шестьсот</string>
+    <string name="num700">семьсот</string>
+    <string name="num800">восемьсот</string>
+    <string name="num900">девятьсот</string>
+
+    <string name="num1000">тысяча</string>
 </resources>

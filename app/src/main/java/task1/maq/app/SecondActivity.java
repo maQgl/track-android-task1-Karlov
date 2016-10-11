@@ -50,7 +50,7 @@ public class SecondActivity extends AppCompatActivity {
         isCounterActive = savedInstanceState.getBoolean("isCounterActive");
         if (savedInstanceState.getInt("counter") > 1) {
             mCounter = savedInstanceState.getInt("counter");
-            mTextView.setText((new MyOwnConverter()).convertNumber(mCounter));
+            mTextView.setText((new MyOwnConverter(this)).convertNumber(mCounter));
         }
     }
 
@@ -105,7 +105,7 @@ public class SecondActivity extends AppCompatActivity {
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
             mCounter = values[0];
-            mTextView.setText((new MyOwnConverter()).convertNumber(mCounter));
+            mTextView.setText((new MyOwnConverter(SecondActivity.this)).convertNumber(mCounter));
         }
 
         @Override

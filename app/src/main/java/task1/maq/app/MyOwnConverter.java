@@ -1,55 +1,67 @@
 package task1.maq.app;
 
+import android.content.Context;
+
 public class MyOwnConverter {
 
-    private String[] teens = {
-            "десять",
-            "одиннадцать",
-            "двенадцать",
-            "тринадцать",
-            "четырнадцать",
-            "пятнадцать",
-            "шестнадцать",
-            "семнадцать",
-            "восемнадцать",
-            "девятнадцать"
-    };
+    private String[] teens;
 
-    private String[][] words = {
-            {
-                    "один",
-                    "два",
-                    "три",
-                    "четыре",
-                    "пять",
-                    "шесть",
-                    "семь",
-                    "восемь",
-                    "девять"
-            },
-            {
-                    "десять",
-                    "двадцать",
-                    "тридцать",
-                    "сорок",
-                    "пятьдесят",
-                    "шестьдесят",
-                    "семьдесят",
-                    "восемьдесят",
-                    "девяносто"
-            },
-            {
-                    "сто",
-                    "двести",
-                    "триста",
-                    "четыреста",
-                    "пятьсот",
-                    "шестьсот",
-                    "семьсот",
-                    "восемьсот",
-                    "девятьсот"
-            }
-    };
+    private String[][] words;
+
+    private Context context;
+
+    public MyOwnConverter(Context context) {
+        this.context = context;
+
+        teens = new String[]{
+                context.getString(R.string.num10),
+                context.getString(R.string.num11),
+                context.getString(R.string.num12),
+                context.getString(R.string.num13),
+                context.getString(R.string.num14),
+                context.getString(R.string.num15),
+                context.getString(R.string.num16),
+                context.getString(R.string.num17),
+                context.getString(R.string.num18),
+                context.getString(R.string.num19)
+        };
+        
+        words = new String[][]{
+                {
+                        context.getString(R.string.num1),
+                        context.getString(R.string.num2),
+                        context.getString(R.string.num3),
+                        context.getString(R.string.num4),
+                        context.getString(R.string.num5),
+                        context.getString(R.string.num6),
+                        context.getString(R.string.num7),
+                        context.getString(R.string.num8),
+                        context.getString(R.string.num9)
+                },
+                {
+                        context.getString(R.string.num10),
+                        context.getString(R.string.num20),
+                        context.getString(R.string.num30),
+                        context.getString(R.string.num40),
+                        context.getString(R.string.num50),
+                        context.getString(R.string.num60),
+                        context.getString(R.string.num70),
+                        context.getString(R.string.num80),
+                        context.getString(R.string.num90)
+                },
+                {
+                        context.getString(R.string.num100),
+                        context.getString(R.string.num200),
+                        context.getString(R.string.num300),
+                        context.getString(R.string.num400),
+                        context.getString(R.string.num500),
+                        context.getString(R.string.num600),
+                        context.getString(R.string.num700),
+                        context.getString(R.string.num800),
+                        context.getString(R.string.num900)
+                }
+        };
+    }
 
     private String checkNum(int num, int pos) {
         int val = num / (int) Math.pow(10, pos) - num / (int) Math.pow(10, pos + 1) * 10;
@@ -69,7 +81,7 @@ public class MyOwnConverter {
 
     public String convertNumber(int num) {
         if (num == 1000) {
-            return "тысяча";
+            return context.getString(R.string.num1000);
         }
         if (num > 1000 || num < 1) {
             return null;
