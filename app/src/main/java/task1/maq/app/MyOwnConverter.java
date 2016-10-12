@@ -8,10 +8,10 @@ public class MyOwnConverter {
 
     private String[][] words;
 
-    private Context context;
+    private String thousand;
 
     public MyOwnConverter(Context context) {
-        this.context = context;
+        thousand = context.getString(R.string.num1000);
 
         teens = new String[]{
                 context.getString(R.string.num10),
@@ -81,7 +81,7 @@ public class MyOwnConverter {
 
     public String convertNumber(int num) {
         if (num == 1000) {
-            return context.getString(R.string.num1000);
+            return thousand;
         }
         if (num > 1000 || num < 1) {
             return null;
